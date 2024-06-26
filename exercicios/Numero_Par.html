@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achando o número par</title>
+</head>
+<body>
+    <input type="number" id="nm">
+    <br>
+    <input type="submit" onclick="calcular()">
+<p>
+    <div id="res"></div>
+</p>
+    <script>
+
+    function calcular(){
+
+        var nm = window.document.getElementById('nm')
+        var nr = Number(nm.value)
+
+        var res = window.document.getElementById('res')
+
+        if((nr%2)==0){
+            res.innerHTML= "True " 
+        }
+        else{
+            res.innerHTML="False " 
+        }
+    }
+    </script>
+</body>
+</html>

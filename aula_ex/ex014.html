@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+
+    <style>
+        body{
+            display:block;
+            background: black;
+        }
+        div#res{
+            background: white;
+            width:400px;
+            height:200px;
+            text-align: center;
+            margin-left: 35%;
+        }
+        h1{
+            color: white;
+            margin-top: 4%;
+             height: 10%;
+             margin-left: 42%;
+            
+        }
+        img#img{
+            display: flex;
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            margin-left: 43%;
+            margin-top: -11%;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <h1>Hora do Dia</h1><p></p>
+    <div id="res">
+        
+        </div>
+        <div id="img1">
+            <img id="img" src="noite.jpg" alt="tarde"/> 
+           </div>
+          
+          
+    <script>
+        function carregar(){
+        var agora = new Date()
+        // var h = agora.getHours()
+        var h = 15
+        var d = window.document.getElementById('res')
+        var corpo = window.document.body
+        var img = window.document.getElementById('img')
+     
+        if(h<12){
+           
+            corpo.style.background='#F9E4B7'
+            d.innerHTML=`Agora são ${h} horas.`
+            img.src='dia.jpg'
+            d.style.background = 'white'
+            
+        }else if(h<18){
+           
+            corpo.style.background='#a06c3f'
+            d.innerHTML=`Agora são ${h} horas.`
+            img.src='tarde.jpg'
+            d.style.background='white'
+
+         
+        }else if(h<=23){
+            
+            corpo.style.background='#2E2E2E'
+            d.innerHTML=`Agora são ${h} horas.`
+            img.src='noite.jpg'
+            d.style.background='white'
+            
+         
+        }
+    }
+    </script>
+</body>
+</html>

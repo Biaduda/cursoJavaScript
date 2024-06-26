@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+
+    <style>
+          div#area{
+            font: normal 15pt Arial; 
+            background: green;
+            color: white;
+            width: 200px ;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+          }
+    </style>
+</head>
+<body>
+    <h1>
+        Eventos com DOM
+    </h1>
+    <div id="area"> <!--dá para colocar a ação executada aqui, depois de id="area", onClick ="clicar()", onmouseenter="entrar()"...-->
+        Interaja...
+    </div>
+
+    <script>
+
+        //declarar a variável fora para todos os function a tribuir uma função
+
+         var a = window.document.getElementById('area')
+
+        //eventos dentro do script
+
+        a.addEventListener('click',clicar) //click, é a ação que irá fazer
+
+        a.addEventListener('mouseenter', entrar)//mouse enter, é a ção que irá fazer com o mouse
+
+        a.addEventListener('mouseout', sair)//mouse out, é a ação de sair que irá fazer no mouse
+        
+        
+        //quando clicar, quando sair, quando entrar, sempre utilizar um function
+
+        function clicar(){
+           
+            a.innerText = "Clicou!"
+            a.style.background='blue'
+        }
+
+        function entrar(){
+       
+        a.innerText="Entrou"
+        a.style.background="red"
+        a.style.color = "white"
+         
+        }
+
+        function sair(){
+            
+            a.innerText="Saiu"
+            a.style.background="pink"
+            a.style.color = "black"
+        }
+
+    </script>
+
+</body>
+</html>

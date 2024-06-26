@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+
+    <style>
+        body{
+            font: normal 18px Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Analisando sua nascionalidade</h1>
+   
+   Digite o país que Você nasceu: <input type="text" name="textpais" id="textpais">
+   <input type="submit" value="Analisar" onclick="pais()">
+
+   <div id="res"></div>
+
+   <script>
+    function pais(){
+
+        var pais = window.document.getElementById('textpais')
+        var res = window.document.getElementById('res')
+
+        res.innerText =  'O país que você digitou foi ' + pais.value
+
+        if(pais.value == 'Brasil'){
+            res.innerHTML += " você é <strong>brasileiro</strong>"
+        }else{
+            
+            res.innerHTML += " você é <strong>estrangeiro</strong>" 
+
+        }
+    }
+
+   </script>
+</body>
+</html>
